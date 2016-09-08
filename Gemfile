@@ -33,6 +33,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# pg gem allow Rails to talk to Postgres
+# rails gem is used by Heroku
+group :production do
+  gem 'pg', '0.15'
+  gem 'rails_12factor', '0.0.2'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
